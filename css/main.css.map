@@ -1,0 +1,18 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/main.scss",
+        "../sass/Helper/_variables.scss",
+        "../sass/Helper/_mixin.scss",
+        "../sass/Base/_reset.scss",
+        "../sass/Base/_customize.scss",
+        "../sass/Components/_button.scss",
+        "../sass/Layout/_header.scss",
+        "../sass/Layout/_about.scss",
+        "../sass/Layout/_find.scss",
+        "../sass/Layout/_footer.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
