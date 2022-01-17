@@ -1,0 +1,41 @@
+.find {
+    padding-top: 4em;
+    background-image: url(../img/accent_bottom_wave_01.png);
+    background-position: bottom;
+    background-size: contain;
+    .formNhapThongTin {
+        padding: 0 $pd-1;
+        background-color: $color-extra;
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.123);
+        transition: $ts-1;
+
+        h3 {
+            font-family: "Montserrat", sans-serif;
+            @include styleText($color-content, $fs-6, $fw-4);
+        }
+        .buntton__main__bg {
+            max-width: 150px;
+        }
+        .formName {
+            position: relative;
+            .iconName {
+                position: absolute;
+                color: $color-main;
+                top: 15px;
+                left: 8px;
+            }
+            .iconName2 {
+                position: absolute;
+                top: 17px;
+                left: 18px;
+                color: $color-main;
+            }
+            .iconName3 {
+                position: absolute;
+                top: 25px;
+                left: 4px;
+                color: $color-main;
+            }
+        }
+    }
+}

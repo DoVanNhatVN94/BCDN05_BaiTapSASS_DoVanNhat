@@ -1,0 +1,21 @@
+.people{
+    z-index: 10;
+    position: relative;
+    padding-top: 2em;
+    background-color: #dcd1f0;
+    .row {
+        z-index: 100;
+    }
+    .people__bg_bottom{
+        z-index: -1;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        pointer-events: none;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

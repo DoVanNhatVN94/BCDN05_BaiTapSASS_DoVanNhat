@@ -1,0 +1,27 @@
+.about {
+    position: relative;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    background-image: url(../img/yellow_top_wave_01.png);
+    background-size: contain;
+    
+    h5 {
+        @include styleText($color-main, $fs-4, $fw-3);
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    }
+    .content {
+        @include styleText($color-tittle, $fs-7, $fw-4);
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    }
+    .bg__bottom {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        pointer-events: none;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

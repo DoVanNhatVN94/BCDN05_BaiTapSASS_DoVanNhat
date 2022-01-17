@@ -1,0 +1,39 @@
+.headerOurTeach {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    .nav-item {
+        .nav-link {
+            padding-right: 2rem;
+            padding-left: 0.5rem;
+            @include styleText($color-content, $fs-2, $fw-3);
+            font-family: "Montserrat", Arial, Helvetica, sans-serif;
+            transition: $ts-1;
+            &:hover {
+                color: $color-main;
+            }
+        }
+    }
+    .nav-link2 {
+        padding-left: 1rem;
+        @include styleText($color-content, $fs-2, $fw-3);
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        transition: $ts-1;
+        &:hover {
+            color: $color-main;
+        }
+    }
+}
+
+// responsive
+@include responsive("large") {
+    .headerPhone {
+        .nav-link {
+            padding-right: 2rem;
+            padding-left: 0.5rem;
+        }
+    }
+}

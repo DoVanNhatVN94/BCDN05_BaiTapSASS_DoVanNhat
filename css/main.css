@@ -1,1 +1,239 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-repeat: no-repeat;
+}
+
+html,
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  color: #181818;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h5 {
+  color: #191919;
+  font-size: 1.55rem;
+  font-weight: 700;
+  font-family: "Montserrat",Arial,Helvetica,sans-serif;
+}
+
+h6 {
+  color: #b61984;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: "Montserrat",Arial,Helvetica,sans-serif;
+}
+
+.form-control {
+  background: transparent;
+  border-radius: 1.5rem;
+  padding: 15px 35px;
+  height: 3rem;
+}
+
+.custom-select {
+  background: transparent;
+  border-radius: 1.5rem;
+  padding: 0 35px;
+  height: 3rem;
+}
+
+.colorMain {
+  color: #b61984;
+}
+
+.button__main {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: #b61984;
+  padding: 16px 60px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-box-shadow: 0 0 0 3em #b61984 inset;
+          box-shadow: 0 0 0 3em #b61984 inset;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border-radius: 50px;
+}
+
+.headerOurTeach {
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.headerOurTeach .nav-item .nav-link {
+  padding-right: 2rem;
+  padding-left: 0.5rem;
+  color: #181818;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.headerOurTeach .nav-item .nav-link:hover {
+  color: #b61984;
+}
+
+.headerOurTeach .nav-link2 {
+  padding-left: 1rem;
+  color: #181818;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.headerOurTeach .nav-link2:hover {
+  color: #b61984;
+}
+
+@media screen and (max-width: 992px) {
+  .headerPhone .nav-link {
+    padding-right: 2rem;
+    padding-left: 0.5rem;
+  }
+}
+
+.about {
+  position: relative;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  background-image: url(../img/yellow_top_wave_01.png);
+  background-size: contain;
+}
+
+.about h5 {
+  color: #b61984;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.about .content {
+  color: #191919;
+  font-size: 3.8rem;
+  font-weight: 700;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.about .bg__bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.about .bg__bottom img {
+  width: 100%;
+  height: auto;
+}
+
+.people {
+  z-index: 10;
+  position: relative;
+  padding-top: 2em;
+  background-color: #dcd1f0;
+}
+
+.people .row {
+  z-index: 100;
+}
+
+.people .people__bg_bottom {
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.people .people__bg_bottom img {
+  width: 100%;
+  height: auto;
+}
+
+.find {
+  padding-top: 4em;
+  background-image: url(../img/accent_bottom_wave_01.png);
+  background-position: bottom;
+  background-size: contain;
+}
+
+.find .formNhapThongTin {
+  padding: 0 25px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.123);
+          box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.123);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.find .formNhapThongTin h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #181818;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.find .formNhapThongTin .buntton__main__bg {
+  max-width: 150px;
+}
+
+.find .formNhapThongTin .formName {
+  position: relative;
+}
+
+.find .formNhapThongTin .formName .iconName {
+  position: absolute;
+  color: #b61984;
+  top: 15px;
+  left: 8px;
+}
+
+.find .formNhapThongTin .formName .iconName2 {
+  position: absolute;
+  top: 17px;
+  left: 18px;
+  color: #b61984;
+}
+
+.find .formNhapThongTin .formName .iconName3 {
+  position: absolute;
+  top: 25px;
+  left: 4px;
+  color: #b61984;
+}
+
+footer {
+  padding-top: 8em;
+  padding-bottom: 8em;
+  background-image: url(../img/footer_background.jpg);
+  background-position: center;
+}
+/*# sourceMappingURL=main.css.map */
