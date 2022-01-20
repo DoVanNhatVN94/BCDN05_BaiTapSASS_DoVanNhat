@@ -8,22 +8,39 @@
     padding: $pd-y $pd-x;
     border: $border;
 }
-@mixin styleHoverBtn($bg, $color, $border) {
-    background: $bg;
-    color: $color;
-    border: $border;
+@mixin styleHoverBtn($bg, $color, $shadow) {
+    color: $bg;
+    background-color: $color;
+    box-shadow: $shadow;
 }
 // @screen : tên màn hình mình cần lấy responsive
-@mixin responsive($screen) {
+@mixin responsiveMax($screen) {
     //map-has-key: kiểm tra key có tồn tại trong map không
-    @if(map-has-key($map: $breakpoints,$key: $screen)){
+    @if (map-has-key($map: $breakpointsMax, $key: $screen)) {
         //tìm thấy màn hình
-        $value: map-get($map: $breakpoints,$key: $screen);
+        $value: map-get(
+            $map: $breakpoints,
+            $key: $screen,
+        );
         @media screen and(max-width: $value) {
             @content;
         }
+    } @else {
+        @error 'màn hình không tồn tại';
     }
-    @else{
+}
+@mixin responsiveMin($screen) {
+    //map-has-key: kiểm tra key có tồn tại trong map không
+    @if (map-has-key($map: $breakpointsMin, $key: $screen)) {
+        //tìm thấy màn hình
+        $value: map-get(
+            $map: $breakpointsMin,
+            $key: $screen,
+        );
+        @media screen and(min-width: $value) {
+            @content;
+        }
+    } @else {
         @error 'màn hình không tồn tại';
     }
 }

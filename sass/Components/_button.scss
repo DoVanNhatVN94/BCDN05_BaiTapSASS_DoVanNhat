@@ -1,8 +1,8 @@
 .button__main{
-    @include styleText($color-extra,$fs-2,$fw-3);
+    @include styleText($color-extra,$fs-2,$fw-2);
     @include styleButton($color-main, $pd-3+3px,$pd-7,none);
     font-family: 'Montserrat', sans-serif;
-    box-shadow:0 0 0 3em $color-main inset;
+    box-shadow: 0 0 0 1px #b61984 inset;
     transition: $ts-1;
     border-radius: 50px;
 }

@@ -1,12 +1,14 @@
 .find {
     padding-top: 4em;
-    background-image: url(../img/accent_bottom_wave_01.png);
-    background-position: bottom;
-    background-size: contain;
+    position: relative;
+
     .formNhapThongTin {
         padding: 0 $pd-1;
         background-color: $color-extra;
-        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.123);
+        border-radius: 10px;
+        box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+        
+
         transition: $ts-1;
 
         h3 {
@@ -15,6 +17,12 @@
         }
         .buntton__main__bg {
             max-width: 150px;
+            button {
+                box-shadow: 0 0 0 2em #b61984 inset;
+                &:hover {
+                    @include styleHoverBtn($color-main, $color-extra, 0 0 0 1px #b61984 inset);
+                }
+            }
         }
         .formName {
             position: relative;
@@ -37,5 +45,34 @@
                 color: $color-main;
             }
         }
+        
+    }
+    .find_bg__bottom {
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        pointer-events: none;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    @media (min-width: 1280px) {
+        .container {
+            width: 1000px;
+        }
+    }
+}
+
+
+
+
+
+
+@include responsive("medium") {
+    .find {
+        
     }
 }

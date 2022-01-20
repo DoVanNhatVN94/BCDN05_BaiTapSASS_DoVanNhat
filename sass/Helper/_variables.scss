@@ -42,7 +42,17 @@ $bd-1: 2px;
 $bd-2: 8px;
 
 //break points
-$breakpoints: (
+$breakpointsMin: (
+    "extra-large": 1200px,
+    "large": 992px,
+    "medium": 768px,
+    "small": 576px,
+    // "extra-large-down": 1199.98px,
+    // "large-down": 991.98px,
+    // "medium-down": 767.98px,
+    // "small-down": 575.98px,
+);
+$breakpointsMax: (
     "extra-large": 1200px,
     "large": 992px,
     "medium": 768px,
@@ -54,4 +64,4 @@ $breakpoints: (
 );
 
 //transition 
-$ts-1: all .5s;
+$ts-1: all 0.3s;

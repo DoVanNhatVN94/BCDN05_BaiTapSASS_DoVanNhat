@@ -1,9 +1,113 @@
-footer{
+.footer {
+    
     padding-top: 8em;
-    padding-bottom: 8em;
+    padding-bottom: 12em;
 
     background-image: url(../img/footer_background.jpg);
+    background-size: cover;
     background-position: center;
-    
-    
+
+    button {
+        width: 100%;
+        height: 4em;
+        @include styleText($color-content, 0.8em, $fw-3);
+        background-color: $color-extra;
+        box-shadow: 0 0 0 2em #fff inset;
+        &:hover {
+            @include styleHoverBtn($color-extra, $color-main, 0 0 0 1px #fff inset);
+        }
+    }
+    h5 {
+        color: $color-extra;
+        margin-bottom: 1.5rem;
+    }
+    .contactUs {
+        h5 {
+            margin-bottom: 2.3rem;
+        }
+        span {
+            margin-right: 0.9rem;
+        }
+        li {
+            padding: 0 0 0.7rem 0;
+        }
+    }
+    li {
+        @include styleText($color-extra, $fs-2, $fw-1);
+        list-style: none;
+
+        line-height: 1;
+        padding: 0.8em 0;
+    }
+    .ab_item {
+        li {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            a {
+                @include styleText($color-extra, $fs-2, $fw-1);
+                text-decoration: none;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    .flex-direction {
+        display: flex;
+        flex-direction: row;
+        i {
+            @include styleText($color-extra, $fs-4, $fw-3);
+            padding-right: 1rem;
+        }
+    }
+    .footer__icon {
+        i {
+            @include styleText($color-extra, $fs-2, $fw-1);
+            transition: $ts-1;
+            &:hover {
+                color: #191919;
+            }
+        }
+    }
+
+    .newsletter {
+        
+        form {
+            input {
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 50px;
+                height: 3.2em;
+                outline: none;
+                font: inherit;
+                width: 100%;
+                background: transparent;
+                line-height: 1;
+                display: block;
+                padding: 1em;
+                color: $color-extra;
+                &::placeholder {
+                    color: $color-extra;
+                }
+            }
+        }
+    }
+    #footer1 {
+        animation-delay: 0.5s;
+    }
+    #footer2 {
+        animation-delay: 0.75s;
+    }
+    #footer3 {
+        animation-delay: 1s;
+    }
+    #footer4 {
+        animation-delay: 1.25s;
+    }
+}
+
+
+@include responsive("medium") {
+    .footer {
+        
+    }
 }

@@ -2,41 +2,72 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    text-transform:capitalize;
-    transition:$ts-1;
-    background-repeat: no-repeat;
 }
 html,
 body {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     @include styleText($color-content, $fs-main, $fw-1);
-    line-height: 1.2;
+
+    outline: none;
+    line-height: 1.8;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: $ts-1;
+    background-repeat: no-repeat;
 }
-p,h1,h2,h3,h4,h5,h6{
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     padding: 0;
 }
-h5{
-    @include styleText($color-tittle,$fs-5,$fw-4);
-    font-family: "Montserrat",Arial,Helvetica,sans-serif;
+h5 {
+    @include styleText($color-tittle, $fs-5, $fw-4);
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
-h6{
-    @include styleText($color-main,$fs-1,$fw-3);
-    font-family: "Montserrat",Arial,Helvetica,sans-serif;
+h6 {
+    @include styleText($color-main, $fs-1, $fw-3);
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+ul {
+    list-style-type: none;
+}
+.col,
+.col-12,
+.col-lg-6 {
+    padding: 0;
+    margin: 0;
+}
+.container {
+    padding-right: 0;
+    padding-left: 0;
 }
 
-.form-control{
-    background:transparent;
-    border-radius: 1.5rem;
-    padding: 15px 35px;
-    height: $fs-6 + 0.5rem;
+.navbar,
+.navbar-brand {
+    padding: 0;
 }
-.custom-select{
-    background:transparent;
+.form-control {
+    background: transparent;
     border-radius: 1.5rem;
-    padding: 0 35px;
+    padding: 12px 12px 12px 42px;
     height: $fs-6 + 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.custom-select {
+    background: transparent;
+    border-radius: 1.5rem;
+    padding: 0 0 0 3em;
+    height: 3.2em;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1200px;
+    }
 }

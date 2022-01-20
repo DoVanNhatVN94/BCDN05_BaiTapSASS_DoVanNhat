@@ -1,13 +1,32 @@
 .headerOurTeach {
     background: transparent;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
+    transition:$ts-1;
+
+    
+        img {
+            width: 80px;
+        }
+    
+
+    .button__header {
+        button {
+            padding: 0.7em 1.5em;
+            border: 1px solid $color-main;
+            box-shadow: 0 0 0 2em #b61984 inset;
+        }
+
+        &:hover button {
+            @include styleHoverBtn($color-main, $color-extra, 0 0 0 1px #b61984 inset);
+        }
+    }
     .nav-item {
         .nav-link {
-            padding-right: 2rem;
+            padding-right: 2.5rem;
             padding-left: 0.5rem;
             @include styleText($color-content, $fs-2, $fw-3);
             font-family: "Montserrat", Arial, Helvetica, sans-serif;
@@ -18,22 +37,53 @@
         }
     }
     .nav-link2 {
-        padding-left: 1rem;
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
         @include styleText($color-content, $fs-2, $fw-3);
         font-family: "Montserrat", Arial, Helvetica, sans-serif;
         transition: $ts-1;
-        &:hover {
+        &:hover i {
             color: $color-main;
         }
     }
-}
-
-// responsive
-@include responsive("large") {
-    .headerPhone {
-        .nav-link {
-            padding-right: 2rem;
-            padding-left: 0.5rem;
+    @media (min-width: 1280px) {
+        .container {
+            width: 1260px;
         }
+    }
+
+    
+}
+.nav-fixed {
+    padding: 0px;
+    position: fixed;
+    background-color: $color-bg;
+    border-bottom: none;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+    
+        img {
+            display: none;
+        }
+    
+}
+// responsive
+// @include responsive("medium") {
+//     .headerPhone {
+//         background-color: $color-bg;
+//         .navbar {
+//             .logo {
+//                 img {
+//                     width: 45px;
+//                 }
+//             }
+//         }
+//     }
+// }
+@keyframes scoll {
+    to{
+
+    }
+    form{
+        
     }
 }

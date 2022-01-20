@@ -1,4 +1,4 @@
-.people{
+.people {
     z-index: 10;
     position: relative;
     padding-top: 2em;
@@ -6,7 +6,7 @@
     .row {
         z-index: 100;
     }
-    .people__bg_bottom{
+    .people__bg_bottom {
         z-index: -1;
         position: absolute;
         bottom: 0;
@@ -16,6 +16,42 @@
         img {
             width: 100%;
             height: auto;
+        }
+    }
+    .people__item {
+        margin-bottom: 2rem;
+
+        .card {
+            background-clip: border-box;
+            border: none;
+            border-radius: $fs-1;
+            transition: $ts-1;
+            overflow: hidden;
+            .overflow {
+                overflow: hidden;
+            }
+            .card-img-top {
+                border-radius: $fs-1 $fs-1 0 0;
+            }
+            &:hover {
+                box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.123);
+            }
+            &:hover img {
+                transform: scale(1.05);
+            }
+        }
+    }
+    #people1{animation-delay: 0.5s;}
+    #people2{animation-delay: 0.75s;}
+    #people3{animation-delay: 1s;}
+    #people4{animation-delay: 1.25s;}
+    #people5{animation-delay: 0.5s;}
+    #people6{animation-delay: 0.75s;}
+    #people7{animation-delay: 1s;}
+    #people8{animation-delay: 1.25s;}
+    @media (min-width: 1280px) {
+        .container {
+            width: 1200px;
         }
     }
 }

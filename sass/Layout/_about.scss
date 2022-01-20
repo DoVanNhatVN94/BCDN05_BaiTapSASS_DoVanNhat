@@ -1,9 +1,6 @@
 .about {
+    padding: 80px 0 80px 0;
     position: relative;
-    padding-top: 4em;
-    padding-bottom: 4em;
-    background-image: url(../img/yellow_top_wave_01.png);
-    background-size: contain;
     
     h5 {
         @include styleText($color-main, $fs-4, $fw-3);
@@ -12,6 +9,18 @@
     .content {
         @include styleText($color-tittle, $fs-7, $fw-4);
         font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        line-height: 1.2;
+    }
+    .bg__top{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        pointer-events: none;
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
     .bg__bottom {
         position: absolute;
@@ -22,6 +31,11 @@
         img {
             width: 100%;
             height: auto;
+        }
+    }
+    @media (min-width: 1280px) {
+        .container {
+            width: 1200px;
         }
     }
 }
