@@ -16,7 +16,7 @@
 // @screen : tên màn hình mình cần lấy responsive
 @mixin responsiveMax($screen) {
     //map-has-key: kiểm tra key có tồn tại trong map không
-    @if (map-has-key($map: $breakpointsMax, $key: $screen)) {
+    @if (map-has-key($map: $breakpoints, $key: $screen)) {
         //tìm thấy màn hình
         $value: map-get(
             $map: $breakpoints,
@@ -31,10 +31,10 @@
 }
 @mixin responsiveMin($screen) {
     //map-has-key: kiểm tra key có tồn tại trong map không
-    @if (map-has-key($map: $breakpointsMin, $key: $screen)) {
+    @if (map-has-key($map: $breakpoints, $key: $screen)) {
         //tìm thấy màn hình
         $value: map-get(
-            $map: $breakpointsMin,
+            $map: $breakpoints,
             $key: $screen,
         );
         @media screen and(min-width: $value) {

@@ -66,8 +66,9 @@ ul {
     height: 3.2em;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
-@media (min-width: 1280px) {
-    .container {
-        max-width: 1200px;
+
+@include responsiveMax("extra-large"){
+    body{
+        font-size:14px;
     }
 }

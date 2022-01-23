@@ -1,78 +1,126 @@
 .find {
-    padding-top: 4em;
-    position: relative;
+  padding-top: 4em;
+  position: relative;
+  .find__bg {
+    .find__img {
+      padding-left: 20px;
+      padding-right: 20px;
 
-    .formNhapThongTin {
-        padding: 0 $pd-1;
-        background-color: $color-extra;
-        border-radius: 10px;
-        box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
-        
+      img {
+        display: block;
+        margin: 0;
+        line-height: 0;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
 
-        transition: $ts-1;
+  .formNhapThongTin {
+    padding-left: 20px;
+    padding-right: 20px;
+    .find__form {
+      padding: 0 $pd-1;
+      background-color: $color-extra;
+      border-radius: 10px;
+      box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+      transition: $ts-1;
+      .form_n_e {
+        .form-control {
+          padding: 1em 1em 1em 3.5em;
+          font-size: 0.8em;
+          height: 3.7em;
+        }
+      }
 
-        h3 {
-            font-family: "Montserrat", sans-serif;
-            @include styleText($color-content, $fs-6, $fw-4);
+      .custom-select {
+        font-size: 0.8em;
+        opacity: 0.8;
+        padding: 0 0 0 3.4em;
+        line-height: 3.2em;
+      }
+      .form-group {
+        margin-bottom: 0;
+      }
+      h3 {
+        font-family: "Montserrat", sans-serif;
+        @include styleText($color-content, $fs-6, $fw-4);
+      }
+      .buntton__main__bg {
+        max-width: 150px;
+        button {
+          box-shadow: 0 0 0 2em #b61984 inset;
+          &:hover {
+            @include styleHoverBtn(
+              $color-main,
+              $color-extra,
+              0 0 0 1px #b61984 inset
+            );
+          }
         }
-        .buntton__main__bg {
-            max-width: 150px;
-            button {
-                box-shadow: 0 0 0 2em #b61984 inset;
-                &:hover {
-                    @include styleHoverBtn($color-main, $color-extra, 0 0 0 1px #b61984 inset);
-                }
-            }
+      }
+      .formName {
+        position: relative;
+        .iconName {
+          position: absolute;
+          color: $color-main;
+          top: 18px;
+          left: 8px;
         }
-        .formName {
-            position: relative;
-            .iconName {
-                position: absolute;
-                color: $color-main;
-                top: 15px;
-                left: 8px;
-            }
-            .iconName2 {
-                position: absolute;
-                top: 17px;
-                left: 18px;
-                color: $color-main;
-            }
-            .iconName3 {
-                position: absolute;
-                top: 25px;
-                left: 4px;
-                color: $color-main;
-            }
+        .iconName2 {
+          position: absolute;
+          top: 19px;
+          left: 23px;
+          color: $color-main;
         }
-        
+        .iconName3 {
+          position: absolute;
+          top: 32px;
+          left: 7px;
+          color: $color-main;
+        }
+      }
     }
-    .find_bg__bottom {
-        position: absolute;
-        z-index: -1;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        pointer-events: none;
-        img {
-            width: 100%;
-            height: auto;
-        }
+  }
+  .find_bg__bottom {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    pointer-events: none;
+    img {
+      width: 100%;
+      height: auto;
     }
-    @media (min-width: 1280px) {
-        .container {
-            width: 1000px;
-        }
-    }
+  }
 }
 
-
-
-
-
-
-@include responsive("medium") {
-    .find {
-        
+//Responsive
+@include responsiveMax("extra-large") {
+  .find {
+    .container {
+      width: calc(100% - 60px);
+      .formNhapThongTin {
+        .find__form {
+          h3 {
+            font-size: 2rem;
+          }
+          .buntton__main__bg {
+            max-width: 100%;
+            button {
+                width: 100%;
+            }
+          }
+        }
+      }
     }
+  }
+}
+@include responsiveMin("extra-large") {
+  .find {
+    .container {
+      max-width: 1040px;
+    }
+  }
 }

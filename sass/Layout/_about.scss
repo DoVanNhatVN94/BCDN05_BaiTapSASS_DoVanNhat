@@ -1,16 +1,19 @@
 .about {
     padding: 80px 0 80px 0;
     position: relative;
-    
-    h5 {
-        @include styleText($color-main, $fs-4, $fw-3);
-        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    .about__left{
+        h5 {
+            @include styleText($color-main, $fs-4, $fw-3);
+            font-family: "Montserrat", Arial, Helvetica, sans-serif;
+            margin-bottom: 0.5em;
+        }
+        .content {
+            @include styleText($color-tittle, $fs-7, $fw-4);
+            font-family: "Montserrat", Arial, Helvetica, sans-serif;
+            line-height: 1.2;
+        }
     }
-    .content {
-        @include styleText($color-tittle, $fs-7, $fw-4);
-        font-family: "Montserrat", Arial, Helvetica, sans-serif;
-        line-height: 1.2;
-    }
+   
     .bg__top{
         position: absolute;
         top: 0;
@@ -36,6 +39,28 @@
     @media (min-width: 1280px) {
         .container {
             width: 1200px;
+        }
+    }
+}
+//responesive
+@include responsiveMax("extra-large"){
+    .about{
+        .about__left{
+            .content {
+                font-size: 3.15rem;
+            }
+        }
+        .container{
+            width: calc(100% - 60px);
+
+        }
+    }
+    
+}
+@include responsiveMin("extra-large"){
+    .about{
+        .container {
+            max-width: 1200px;
         }
     }
 }

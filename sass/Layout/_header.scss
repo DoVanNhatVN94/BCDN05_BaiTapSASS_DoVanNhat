@@ -1,4 +1,5 @@
 .headerOurTeach {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     background: transparent;
     position: absolute;
     top: 0;
@@ -29,7 +30,7 @@
             padding-right: 2.5rem;
             padding-left: 0.5rem;
             @include styleText($color-content, $fs-2, $fw-3);
-            font-family: "Montserrat", Arial, Helvetica, sans-serif;
+            
             transition: $ts-1;
             &:hover {
                 color: $color-main;
@@ -37,7 +38,7 @@
         }
     }
     .nav-link2 {
-        padding-left: 0.7rem;
+        // padding-left: 0.7rem;
         padding-right: 0.7rem;
         @include styleText($color-content, $fs-2, $fw-3);
         font-family: "Montserrat", Arial, Helvetica, sans-serif;
@@ -46,11 +47,7 @@
             color: $color-main;
         }
     }
-    @media (min-width: 1280px) {
-        .container {
-            width: 1260px;
-        }
-    }
+    
 
     
 }
@@ -66,24 +63,31 @@
         }
     
 }
-// responsive
-// @include responsive("medium") {
-//     .headerPhone {
-//         background-color: $color-bg;
-//         .navbar {
-//             .logo {
-//                 img {
-//                     width: 45px;
-//                 }
-//             }
-//         }
-//     }
-// }
-@keyframes scoll {
-    to{
-
+//responesive
+@include responsiveMax("extra-large"){
+    .headerOurTeach{
+        background-color: $color-bg;
+        .navbar{
+            justify-content: flex-start;
+            img {
+                width: 45px;
+            }
+        }
+        .container {
+            width: calc(100% - 60px);
+        }
     }
-    form{
-        
+    .nav-fixed {
+        img {
+            display: block;
+        }
+    }
+    
+}
+@include responsiveMin("extra-large"){
+    .headerOurTeach{
+        .container {
+            max-width: 1200px;
+        }
     }
 }

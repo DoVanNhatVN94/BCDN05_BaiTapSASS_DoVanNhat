@@ -29,15 +29,16 @@
 <body>
     <header class="headerOurTeach animate__animated animate__fadeIn" id="headerOurTeach">
         <nav class="container navbar navbar-expand-xl ">
-            <a class="logo" href="#">
-                <img src="./img/crest.png" alt="tabula">
-            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTabula"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
                     <i class="fa fa-bars"></i>
                 </span>
             </button>
+            <a class="logo" href="#">
+                <img src="./img/crest.png" alt="tabula">
+            </a>
+
 
             <div class="collapse navbar-collapse" id="navbarTabula">
                 <ul class="navbar-nav ml-auto align-items-center">
@@ -63,7 +64,7 @@
                         <button class="button__main"><span class="fa fa-phone"></span> (+1) 555 234-8765</button>
                     </div>
 
-                    <ul class="navbar-nav mr-auto pl-2">
+                    <ul class="navbar-nav mr-auto pl-4">
                         <li>
                             <a class="nav-link2" href="#"><i class="fab fa-twitter"></i></a>
                         </li>
@@ -84,7 +85,7 @@
     </header>
     <section class="about">
         <div class="bg__top">
-            <img src="./img/yellow_top_wave_01.png" alt="">
+            <img src="./img/yellow_top_wave_01.png" alt="" >
         </div>
         <div class="container">
 
@@ -96,7 +97,7 @@
                     </div>
                 </div>
                 <div class="about__right col-12 col-lg-6 animate__animated animate__fadeInDown">
-                    <img src="./img/hero_team.png" alt="">
+                    <img src="./img/hero_team.png" alt="" style="max-width: 100%;">
                 </div>
             </div>
         </div>
@@ -215,46 +216,54 @@
         </div>
     </section>
     <section class="find">
-        <div class="find__bg container">
-            <div class="row">
-                <div class="find__img col-12 col-lg-7 animate__animated" id="find_left">
-                    <img src="./img/conatct_inner.png" alt="" srcset="">
-                </div>
-                <div class="find__form col-12 col-lg-5 animate__animated" id="find_right">
-                    <form id="form1" class="formNhapThongTin">
-                        <div class="form__head">
-                            <h3 class="text-center py-5">Find Your Course</h3>
+        <div class="find__bg ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-7 animate__animated" id="find_left">
+                        <div class="find__img">
+                            <img src="./img/conatct_inner.png" alt="" style="max-width: 100%;">
                         </div>
 
-                        <div class="row px-3">
-                            <div class="col-12 col-lg-6 formName py-1">
-                                <i class="fa fa-user col-2 iconName"></i>
-                                <input class="form-control" type="text" id="inpName" placeholder="Name">
+                    </div>
+                    <div class="col-12 col-lg-5 animate__animated" id="find_right">
+                        <form id="form1" class="formNhapThongTin">
+                            <div class="find__form">
+                                <div class="form__head">
+                                    <h3 class=" py-5">Find Your Course</h3>
+                                </div>
+
+                                <div class="row px-3 py-1 form_n_e">
+                                    <div class="col-12 col-lg-6 formName py-1">
+                                        <i class="fa fa-user col-2 iconName"></i>
+                                        <input class="form-control" type="text" id="inpName" placeholder="Name">
+                                    </div>
+                                    <div class="col-12 col-lg-6 formName py-1">
+                                        <i class="fa fa-envelope col-2 iconName"></i>
+                                        <input class="form-control" type="text" id="email" id="inpEmail"
+                                            placeholder="E-mail">
+                                    </div>
+                                </div>
+                                <div class="form-group pt-2 formName">
+                                    <i class="fa fa-user-graduate iconName2"></i>
+                                    <select class="custom-select" id="inpMess">
+                                        <option selected>English</option>
+                                        <option value="1">French</option>
+                                        <option value="2">Spanish</option>
+                                        <option value="3">German</option>
+                                    </select>
+                                </div>
+                                <div class="form-group py-3 formName">
+                                    <i class="fa fa-comment-alt col-1 iconName3"></i>
+                                    <textarea class="form-control" id="inpMessage" placeholder="Message"
+                                        rows="3"></textarea>
+                                </div>
+                                <div class="buntton__main__bg py-5">
+                                    <button class="button__main">SEND</button>
+                                </div>
                             </div>
-                            <div class="col-12 col-lg-6 formName py-1">
-                                <i class="fa fa-envelope col-2 iconName"></i>
-                                <input class="form-control" type="text" id="email" id="inpEmail" placeholder="E-mail">
-                            </div>
-                        </div>
-                        <div class="form-group py-1 formName">
-                            <i class="fa fa-user-graduate iconName2"></i>
-                            <select class="custom-select" id="inpMess">
-                                <option selected>English</option>
-                                <option value="1">French</option>
-                                <option value="2">Spanish</option>
-                                <option value="3">German</option>
-                            </select>
-                        </div>
-                        <div class="form-group py-1 formName">
-                            <i class="fa fa-comment-alt col-1 iconName3"></i>
-                            <textarea class="form-control" id="inpMessage" placeholder="Message" rows="3"></textarea>
-                        </div>
 
-
-                        <div class="buntton__main__bg py-5">
-                            <button class="button__main">SEND</button>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -265,7 +274,7 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-6 col-lg-3 px-4 animate__animated" id="footer1">
+                <div class="col-6 col-lg-3 px-4 animate__animated" id="footer1">
                     <div class="contactUs">
 
                         <h5>Contact us</h5>
@@ -291,7 +300,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-3 px-4 animate__animated" id="footer2">
+                <div class=" col-6 col-lg-3 px-4 animate__animated" id="footer2">
                     <div class="quick">
                         <div class="quick__bg">
                             <h5>Quick Links</h5>
@@ -312,7 +321,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-3 px-4 animate__animated" id="footer3">
+                <div class=" col-6 col-lg-3 px-4 animate__animated" id="footer3">
                     <div class="aboutUs">
                         <div class="aboutUs__bg">
                             <h5>About</h5>
@@ -333,7 +342,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-3 px-4 animate__animated" id="footer4">
+                <div class=" col-6 col-lg-3 px-4 animate__animated" id="footer4">
                     <div class="newsletter">
                         <h5>Newsletter</h5>
                         <form>

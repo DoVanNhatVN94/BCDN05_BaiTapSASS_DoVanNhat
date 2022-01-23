@@ -49,9 +49,22 @@
     #people6{animation-delay: 0.75s;}
     #people7{animation-delay: 1s;}
     #people8{animation-delay: 1.25s;}
-    @media (min-width: 1280px) {
+    
+}
+@include responsiveMax("extra-large"){
+    .people{
+        
+        .container{
+            width: calc(100% - 60px);
+
+        }
+    }
+    
+}
+@include responsiveMin("extra-large"){
+    .people{
         .container {
-            width: 1200px;
+            max-width: 1200px;
         }
     }
 }
