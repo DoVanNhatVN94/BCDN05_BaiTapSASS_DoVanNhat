@@ -15,7 +15,6 @@ body {
   line-height: 1.8;
   border: none;
   text-decoration: none;
-  text-transform: capitalize;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   background-repeat: no-repeat;
@@ -282,6 +281,11 @@ ul {
 
 .people .row {
   z-index: 100;
+}
+
+.people .card-body {
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .people .people__bg_bottom {
